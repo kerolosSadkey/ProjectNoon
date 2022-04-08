@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Autofac.Mvc5/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net472/Autofac.Integration.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Autofac.Integration.Mvc.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Autofac.Mvc5/6.0.0": {
+      "sha512": "0bW9vsRf4QZKTYBxyoKbQFuk6hn1yv9VFlVppVrqUyyLmB+jZLTiSriL5YjUXt8+hHlk/IHwjyd+IzkeB0xPQw==",
+      "type": "package",
+      "path": "autofac.mvc5/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.mvc5.6.0.0.nupkg.sha512",
+        "autofac.mvc5.nuspec",
+        "icon.png",
+        "lib/net472/Autofac.Integration.Mvc.dll",
+        "lib/net472/Autofac.Integration.Mvc.pdb",
+        "lib/net472/Autofac.Integration.Mvc.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Autofac.Mvc5 >= 6.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\enaei\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\enaei\\Desktop\\ITI\\aspDotNet\\Noon\\Repository\\Repository2.csproj",
+      "projectName": "Repository2",
+      "projectPath": "C:\\Users\\enaei\\Desktop\\ITI\\aspDotNet\\Noon\\Repository\\Repository2.csproj",
+      "packagesPath": "C:\\Users\\enaei\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\enaei\\Desktop\\ITI\\aspDotNet\\Noon\\Repository\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\enaei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "Autofac.Mvc5": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Autofac.Mvc5 6.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Autofac.Mvc5",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}

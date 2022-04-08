@@ -1,0 +1,12 @@
+D:\ItiKerolos\Noon\Noon\Models\bin\Debug\Models.dll.config
+D:\ItiKerolos\Noon\Noon\Models\bin\Debug\Models.dll
+D:\ItiKerolos\Noon\Noon\Models\bin\Debug\Models.pdb
+D:\ItiKerolos\Noon\Noon\Models\bin\Debug\EntityFramework.dll
+D:\ItiKerolos\Noon\Noon\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\ItiKerolos\Noon\Noon\Models\bin\Debug\EntityFramework.xml
+D:\ItiKerolos\Noon\Noon\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.csproj.CopyComplete
+D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.dll
+D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.pdb

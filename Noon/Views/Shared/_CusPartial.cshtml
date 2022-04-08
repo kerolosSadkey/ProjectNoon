@@ -1,0 +1,46 @@
+﻿@using Model
+@helper customersList(IQueryable<Customer> customers)
+{
+    <table class="table" style="width: 750px; margin:auto;">
+        <tr>
+            <th>First Naem</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Balance</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var customer in customers)
+        {
+            <tr>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.Email</td>
+                <td>@customer.Balance</td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit",
+               new { @id = customer.id },
+               new { @class = "btn btn-warning" })
+                </td>
+
+                <td>
+                    @Ajax.ActionLink("Delete", "Delete",
+               new { @id = customer.id },
+               new AjaxOptions
+               {
+                   InsertionMode = InsertionMode.Replace,
+                   UpdateTargetId = "table"
+               },
+               new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </table>
+    <div class="container d-flex justify-content-center mt-5">
+        @Html.ActionLink("Add New", "Create", null, new { @class = "btn btn-success" })
+
+    </div>
+}
+
+@customersList(Model)

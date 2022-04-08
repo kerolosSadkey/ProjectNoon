@@ -1,0 +1,5 @@
+C:\Users\enaei\Desktop\ITI\aspDotNet\Noon\DataV2\obj\Debug\Data.csproj.AssemblyReference.cache
+C:\Users\enaei\Desktop\ITI\aspDotNet\Noon\DataV2\obj\Debug\Data.Migrations.Init.resources
+C:\Users\enaei\Desktop\ITI\aspDotNet\Noon\DataV2\obj\Debug\Data.Migrations.InitV2.resources
+C:\Users\enaei\Desktop\ITI\aspDotNet\Noon\DataV2\obj\Debug\Data.csproj.GenerateResource.cache
+C:\Users\enaei\Desktop\ITI\aspDotNet\Noon\DataV2\obj\Debug\Data.csproj.CoreCompileInputs.cache

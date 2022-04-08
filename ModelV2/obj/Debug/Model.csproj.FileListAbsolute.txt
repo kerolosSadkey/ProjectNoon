@@ -1,0 +1,2 @@
+C:\Users\enaei\Desktop\ITI\aspDotNet\Noon\ModelV2\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\enaei\Desktop\ITI\aspDotNet\Noon\ModelV2\obj\Debug\Model.csproj.CoreCompileInputs.cache
