@@ -15,3 +15,20 @@ D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.csproj.CoreCompileInputs.cache
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.csproj.CopyComplete
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.dll
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.pdb
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\DB_Data.dll.config
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\DB_Data.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\DB_Data.pdb
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\EntityFramework.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\Models.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\Models.pdb
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\Models.dll.config
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\EntityFramework.xml
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.csproj.AssemblyReference.cache
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.Migrations.init.resources
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.csproj.GenerateResource.cache
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.csproj.CoreCompileInputs.cache
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.csproj.CopyComplete
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.pdb

@@ -10,3 +10,15 @@ D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.csproj.CopyComplete
 D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.dll
 D:\ItiKerolos\Noon\Noon\Models\obj\Debug\Models.pdb
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\bin\Debug\Models.dll.config
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\bin\Debug\Models.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\bin\Debug\Models.pdb
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\bin\Debug\EntityFramework.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\bin\Debug\EntityFramework.xml
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\obj\Debug\Models.csproj.CopyComplete
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\obj\Debug\Models.dll
+D:\Full Stack DotNet_ITI(3)\Project-Dashboard\Models\obj\Debug\Models.pdb
