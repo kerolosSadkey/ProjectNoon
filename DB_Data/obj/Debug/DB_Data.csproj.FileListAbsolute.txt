@@ -32,3 +32,22 @@ D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.dll
 D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.pdb
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.Migrations.init.resources
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.csproj.GenerateResource.cache
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\DB_Data.dll.config
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\DB_Data.dll
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\DB_Data.pdb
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\EntityFramework.dll
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\Models.dll
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\Models.pdb
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\Models.dll.config
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\EntityFramework.xml
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.csproj.AssemblyReference.cache
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.csproj.CoreCompileInputs.cache
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.csproj.CopyComplete
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.dll
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.pdb
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.Migrations.init.resources
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.csproj.GenerateResource.cache
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.Migrations.initV2.resources
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.Migrations.initV3.resources

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,10 @@ namespace Model
     {
 
         [ForeignKey("Customer")]
-        public int customerid { get; set; }
+        public int CustomerID { get; set; }
+        [ForeignKey("Shipper")]
+        public int ShipperID { get; set; }
+
         // Each Order is made by one Customer
         public Customer Customer { get; set; }
 

@@ -13,11 +13,13 @@ namespace Repository
     {
         DbContext Context;
         DbSet<T> Table;
+        DbSet<OrderSummary> OrderSummary;
 
         public MainRepository(IContextFactory ContextFactory)
         {
             Context = ContextFactory.GetContext();
             Table = Context.Set<T>();
+            OrderSummary = Context.Set<OrderSummary>();
         }
 
         public void Add(T entity)
@@ -48,6 +50,11 @@ namespace Repository
         public void Update(T entity)
         {
             Context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public IQueryable<OrderSummary> getAllOrders(int id)
+        {
+            return OrderSummary.Where(i => i.CustomerID == id);
         }
 
     }

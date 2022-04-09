@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,8 @@ namespace Model
         public ICollection<Images> Images { get; set; }
 
         // Each Product is sold by a collection of Sellers
-        [Required]
+        [ForeignKey("Sellers")]
+        public int SellerID { get; set; }
         public Seller Sellers { get; set; }
 
         // Each Product has a collection of reviews
@@ -44,7 +46,8 @@ namespace Model
         public ICollection<Order> Orders { get; set; }
 
         // Each Product is related to One Category
-        [Required]
+        [ForeignKey("Category")]
+        public int CategoryID { get; set; }
         public Category Category { get; set; }
 
         public ICollection<Cart> Carts { get; set; }
