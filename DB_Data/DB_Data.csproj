@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="ContextFactory.cs" />
     <Compile Include="IContextFactory.cs" />
-    <Compile Include="Migrations\202204061844268_init.cs" />
-    <Compile Include="Migrations\202204061844268_init.designer.cs">
-      <DependentUpon>202204061844268_init.cs</DependentUpon>
+    <Compile Include="Migrations\202204091244442_init.cs" />
+    <Compile Include="Migrations\202204091244442_init.designer.cs">
+      <DependentUpon>202204091244442_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -79,8 +79,8 @@
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204061844268_init.resx">
-      <DependentUpon>202204061844268_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204091244442_init.resx">
+      <DependentUpon>202204091244442_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

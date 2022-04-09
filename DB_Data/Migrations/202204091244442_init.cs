@@ -200,18 +200,18 @@
                 c => new
                     {
                         id = c.Int(nullable: false, identity: true),
+                        customerid = c.Int(nullable: false),
                         OrderDate = c.String(),
                         TotalPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                         IsPaid = c.Boolean(nullable: false),
                         Discount = c.Decimal(nullable: false, precision: 18, scale: 2),
                         DeliveryStatus = c.String(),
-                        Customer_id = c.Int(),
                         Shipper_id = c.Int(),
                     })
                 .PrimaryKey(t => t.id)
-                .ForeignKey("dbo.Customers", t => t.Customer_id)
+                .ForeignKey("dbo.Customers", t => t.customerid, cascadeDelete: true)
                 .ForeignKey("dbo.Shippers", t => t.Shipper_id)
-                .Index(t => t.Customer_id)
+                .Index(t => t.customerid)
                 .Index(t => t.Shipper_id);
             
             CreateTable(
@@ -281,7 +281,7 @@
             DropForeignKey("dbo.Orders", "product_id", "dbo.Products");
             DropForeignKey("dbo.OrderSummaries", "Shipper_id", "dbo.Shippers");
             DropForeignKey("dbo.Orders", "OrderSummary_id", "dbo.OrderSummaries");
-            DropForeignKey("dbo.OrderSummaries", "Customer_id", "dbo.Customers");
+            DropForeignKey("dbo.OrderSummaries", "customerid", "dbo.Customers");
             DropForeignKey("dbo.Likes", "Product_id", "dbo.Products");
             DropForeignKey("dbo.Likes", "Customer_id", "dbo.Customers");
             DropForeignKey("dbo.Products", "Category_id", "dbo.Categories");
@@ -307,7 +307,7 @@
             DropIndex("dbo.Reviews", new[] { "Product_id" });
             DropIndex("dbo.Reviews", new[] { "Customer_id" });
             DropIndex("dbo.OrderSummaries", new[] { "Shipper_id" });
-            DropIndex("dbo.OrderSummaries", new[] { "Customer_id" });
+            DropIndex("dbo.OrderSummaries", new[] { "customerid" });
             DropIndex("dbo.Orders", new[] { "product_id" });
             DropIndex("dbo.Orders", new[] { "OrderSummary_id" });
             DropIndex("dbo.Likes", new[] { "Product_id" });

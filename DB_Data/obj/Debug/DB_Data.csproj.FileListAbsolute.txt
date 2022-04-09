@@ -9,8 +9,6 @@ D:\ItiKerolos\Noon\Noon\DB_Data\bin\Debug\Models.dll.config
 D:\ItiKerolos\Noon\Noon\DB_Data\bin\Debug\EntityFramework.xml
 D:\ItiKerolos\Noon\Noon\DB_Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.csproj.AssemblyReference.cache
-D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.Migrations.init.resources
-D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.csproj.GenerateResource.cache
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.csproj.CoreCompileInputs.cache
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.csproj.CopyComplete
 D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.dll
@@ -32,3 +30,5 @@ D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.csproj.C
 D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.csproj.CopyComplete
 D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.dll
 D:\Full Stack DotNet_ITI(3)\Project-Dashboard\DB_Data\obj\Debug\DB_Data.pdb
+D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.Migrations.init.resources
+D:\ItiKerolos\Noon\Noon\DB_Data\obj\Debug\DB_Data.csproj.GenerateResource.cache
