@@ -13,56 +13,49 @@ namespace Repository
     {
         DbContext Context;
         IRepository<Address> AddressRepository;
-        IRepository<Admin> AdminRepository;
         IRepository<Card> CardRepository;
         IRepository<Category> CategoryRepository;
-        IRepository<Customer> CustomerRepository;
+        IRepository<User> UserRepository;
         IRepository<Images> ImagesRepository;
         IRepository<Likes> LikesRepository;
-        IRepository<Order> OrderRepository;
-        IRepository<OrderSummary> OrderSummaryRepository;
+        IRepository<Orders> OrdersRepository;
+        IRepository<OrderItems> OrderItemsRepository;
         IRepository<Phone> PhoneRepository;
         IRepository<Product> ProductRepository;
         IRepository<Reviews> ReviewsRepository;
-        IRepository<Seller> SellerRepository;
-        IRepository<Shipper> ShipperRepository;
         IRepository<Wishlist> WhishlistRepository;
         IRepository<Cart> CartRepository;
 
         // Constructor
         public UnitOfWork(IContextFactory ContextFactory,
         IRepository<Address> _AddressRepository,
-        IRepository<Admin> _AdminRepository,
         IRepository<Card> _CardRepository,
         IRepository<Category> _CategoryRepository,
-        IRepository<Customer> _CustomerRepository,
+        IRepository<User> _UserRepository,
         IRepository<Images> _ImagesRepository,
         IRepository<Likes> _LikesRepository,
-        IRepository<Order> _OrderRepository,
-        IRepository<OrderSummary> _OrderSummaryRepository,
+        IRepository<Orders> _OrdersRepository,
+        IRepository<OrderItems> _OrderItemsRepository,
         IRepository<Phone> _PhoneRepository,
         IRepository<Product> _ProductRepository,
         IRepository<Reviews> _ReviewsRepository,
-        IRepository<Seller> _SellerRepository,
-        IRepository<Shipper> _ShipperRepository,
+
         IRepository<Wishlist> _WhishlistRepository,
         IRepository<Cart> _CartRepository)
         {
             Context = ContextFactory.GetContext();
             AddressRepository = _AddressRepository;
-            AdminRepository = _AdminRepository;
+
             CardRepository = _CardRepository;
             CategoryRepository = _CategoryRepository;
-            CustomerRepository = _CustomerRepository;
+            UserRepository = _UserRepository;
             ImagesRepository = _ImagesRepository;
             LikesRepository = _LikesRepository;
-            OrderRepository = _OrderRepository;
-            OrderSummaryRepository = _OrderSummaryRepository;
+            OrdersRepository = _OrdersRepository;
+            OrderItemsRepository = _OrderItemsRepository;
             PhoneRepository = _PhoneRepository;
             ProductRepository = _ProductRepository;
             ReviewsRepository = _ReviewsRepository;
-            SellerRepository = _SellerRepository;
-            ShipperRepository = _ShipperRepository;
             WhishlistRepository = _WhishlistRepository;
             CartRepository = _CartRepository;
         }
@@ -70,11 +63,6 @@ namespace Repository
         public IRepository<Address> getAddressRepo()
         {
             return AddressRepository;
-        }
-
-        public IRepository<Admin> getAdminRepo()
-        {
-            return AdminRepository;
         }
 
         public IRepository<Card> getCardRepo()
@@ -92,9 +80,9 @@ namespace Repository
             return CategoryRepository;
         }
 
-        public IRepository<Customer> getCustomerRepo()
+        public IRepository<User> getUserRepo()
         {
-            return CustomerRepository;
+            return UserRepository;
         }
 
         public IRepository<Images> getImagesRepo()
@@ -107,14 +95,14 @@ namespace Repository
             return LikesRepository;
         }
 
-        public IRepository<Order> getOrderRepo()
+        public IRepository<Orders> getOrdersRepo()
         {
-            return OrderRepository;
+            return OrdersRepository;
         }
 
-        public IRepository<OrderSummary> getOrderSummaryRepo()
+        public IRepository<OrderItems> getOrderItemsRepo()
         {
-            return OrderSummaryRepository;
+            return OrderItemsRepository;
         }
 
         public IRepository<Phone> getPhoneRepo()
@@ -132,15 +120,6 @@ namespace Repository
             return ReviewsRepository;
         }
 
-        public IRepository<Seller> getSellerRepo()
-        {
-            return SellerRepository;
-        }
-
-        public IRepository<Shipper> getShipperRepo()
-        {
-            return ShipperRepository;
-        }
 
         public IRepository<Wishlist> getWishlistRepo()
         {

@@ -10,9 +10,9 @@ namespace Model
     public class Cart : Base
     {
         // Each cart is belonged to one customer
-        [ForeignKey("Customer")]
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+        public User User { get; set; }
 
         // Each cart contains collection of products
         [ForeignKey("Products")]

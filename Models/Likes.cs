@@ -11,9 +11,9 @@ namespace Model
     public class Likes : Base
     {
         [Required]
-        [ForeignKey("Customer")]
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+        public User User { get; set; }
 
         [Required]
         [ForeignKey("Product")]

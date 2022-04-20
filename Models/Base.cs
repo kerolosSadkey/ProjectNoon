@@ -11,6 +11,6 @@ namespace Model
     {
         // identity auto generated
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
+        public int Id { get; set; }
     }
 }

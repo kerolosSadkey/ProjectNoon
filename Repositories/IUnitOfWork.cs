@@ -10,19 +10,16 @@ namespace Repository
     public interface IUnitOfWork
     {
         IRepository<Address> getAddressRepo();
-        IRepository<Admin> getAdminRepo();
         IRepository<Card> getCardRepo();
         IRepository<Category> getCategoryRepo();
-        IRepository<Customer> getCustomerRepo();
+        IRepository<User> getUserRepo();
         IRepository<Images> getImagesRepo();
         IRepository<Likes> getLikesRepo();
-        IRepository<Order> getOrderRepo();
-        IRepository<OrderSummary> getOrderSummaryRepo();
+        IRepository<Orders> getOrdersRepo();
+        IRepository<OrderItems> getOrderItemsRepo();
         IRepository<Phone> getPhoneRepo();
         IRepository<Product> getProductRepo();
         IRepository<Reviews> getReviewsRepo();
-        IRepository<Seller> getSellerRepo();
-        IRepository<Shipper> getShipperRepo();
         IRepository<Wishlist> getWishlistRepo();
         IRepository<Cart> getCartRepo();
         void Save();

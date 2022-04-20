@@ -11,18 +11,12 @@ namespace Model
     public class Phone : Base
     {
         [MaxLength(11)]
+        [RegularExpression("([0-9]+)")]
         public string PhoneNumber { get; set; }
 
-        [ForeignKey("Customer")]
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+        public User User { get; set; }
 
-        [ForeignKey("Seller")]
-        public int SellerID { get; set; }
-        public Seller Seller { get; set; }
-
-        [ForeignKey("Shipper")]
-        public int ShipperID { get; set; }
-        public Shipper Shipper { get; set; }
     }
 }

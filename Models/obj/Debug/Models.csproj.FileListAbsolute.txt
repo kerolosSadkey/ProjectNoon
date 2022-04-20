@@ -29,8 +29,8 @@ C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\bin\Debug\Ent
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\bin\Debug\EntityFramework.xml
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.csproj.AssemblyReference.cache
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.dll
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.pdb
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.csproj.AssemblyReference.cache

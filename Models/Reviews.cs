@@ -11,9 +11,9 @@ namespace Model
     public class Reviews : Base
     {
         // Each Review is given by one customer
-        [ForeignKey("Customer")]
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+        public User User { get; set; }
 
         // Each Review is given for one specific Product
         [ForeignKey("Product")]

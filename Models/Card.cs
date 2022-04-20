@@ -25,18 +25,10 @@ namespace Model
 
 
         // Each card is belonged to one customer
-        [ForeignKey("Customer")]
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+        public User User { get; set; }
 
-        // Each card is belonged to one supplier
-        [ForeignKey("Seller")]
-        public int SellerID { get; set; }
-        public Seller Seller { get; set; }
 
-        // Each card is belonged to one shipper
-        [ForeignKey("Shipper")]
-        public int ShipperID { get; set; }
-        public Shipper Shipper { get; set; }
     }
 }

@@ -1,0 +1,147 @@
+﻿@model Noon.ViewModels.UserViewModel
+
+<div class="nk-content-body">
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title">Add User</h3>
+            </div><!-- .nk-block-head-content -->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+    <div class="nk-block">
+        <div class="card card-bordered">
+            <div class="card-inner">
+                @using (Html.BeginForm("Create","User"))
+                {
+                    <div class="row gy-4">
+
+                        @*For security*@
+                        @Html.AntiForgeryToken()
+
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.FirstName, "First Name", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.FirstName, null, new { @class = "tex-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.LastName, "Last Name", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.LastName, null, new { @class = "tex-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email, "Email", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Email, null, new { @class = "tex-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password, "Password", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Password, null, new { @class = "tex-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.PhoneNumber, "Phone", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.PhoneNumber, null, new { @class = "tex-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Street, "Street", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.TextBoxFor(m => m.Street, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Street, null, new { @class = "tex-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.City, "City", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.City, null, new { @class = "tex-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Role, "Role", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.DropDownListFor(m => m.Role, new List<SelectListItem>
+                               {
+                                    new SelectListItem { Text = "Customer", Value = "Customer"},
+                                    new SelectListItem { Text = "Seller", Value = "Seller"},
+                                    new SelectListItem { Text = "Shipper", Value = "Shipper"},
+                                    new SelectListItem { Text = "Admin", Value = "Admin"}
+                               }, new { @class = "orm-select js-select2" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Balance, "Balance", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.TextBoxFor(m => m.Balance, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+                        <div class="col-xxl-3 col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.IsActive, "Status", new { @class = "form-label" })
+                                <div class="form-control-wrap">
+                                    @Html.DropDownListFor(m => m.IsActive, new List<SelectListItem>
+                               {
+                                    new SelectListItem { Text = "Active", Value = "true"},
+                                    new SelectListItem { Text = "Suspended", Value = "false"}
+                               }, new { @class = "orm-select js-select2" })
+                                </div>
+                            </div>
+                        </div>
+                        <!--col-->
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Add User</button>
+                            </div>
+                        </div>
+                        <!--col-->
+                    </div>
+                    <!--row-->
+                }
+            </div><!-- .card-inner-group -->
+        </div><!-- .card -->
+    </div><!-- .nk-block -->
+</div>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

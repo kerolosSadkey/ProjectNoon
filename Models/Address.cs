@@ -17,22 +17,13 @@ namespace Model
         public string City { get; set; }
 
         // Egyptian postal code consists of 5 digits
-        [Range(10000, 99999)]
         public int PostalCode { get; set; }
 
-        // Each address is belonged to one customer
-        [ForeignKey("Customer")]
-        public int CustomerID { get; set; }
-        public Customer Customer { get; set; }
+        // Each address is belonged to one User
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+        public User User { get; set; }
 
-        // Each address is belonged to one supplier
-        [ForeignKey("Seller")]
-        public int SellerID { get; set; }
-        public Seller Seller { get; set; }
 
-        // Each address is belonged to one shipper
-        [ForeignKey("Shipper")]
-        public int ShipperID { get; set; }
-        public Shipper Shipper { get; set; }
     }
 }

@@ -10,9 +10,9 @@ namespace Model
 {
     public class Wishlist : Base
     {
-        [ForeignKey("Customers")]
-        public int CustomerID { get; set; }
-        public Customer Customers { get; set; }
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+        public User User { get; set; }
 
         [ForeignKey("Product")]
         public int ProductID { get; set; }
