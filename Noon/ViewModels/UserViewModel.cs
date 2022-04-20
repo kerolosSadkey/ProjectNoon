@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace Noon.ViewModels
 {
-    public class UserViewModel
+    public class UserViewModel : Base
     {
         [Required(ErrorMessage = "First Name is required")]
         [MaxLength(50)]

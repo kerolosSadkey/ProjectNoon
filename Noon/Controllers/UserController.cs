@@ -41,7 +41,7 @@ namespace Noon.Controllers
                 .Include(u => u.Addresses)
                 .Where(u => u.Role == "Customer");
 
-            return View("Index",users);
+            return View("Index", users);
         }
 
         // GET: Sellers
@@ -71,93 +71,138 @@ namespace Noon.Controllers
         // GET: User/Create
         public ActionResult Create()
         {
-            return View();
+            return View("UserForm");
         }
 
-        // POST: Customers/Create
+        // POST: Customers/Save
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(UserViewModel model)
+        public ActionResult Save(UserViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new User
+                // means you create new user not updating
+                if (model.Id == 0)
                 {
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
-                    Email = model.Email,
-                    Password = model.Password,
-                    Balance = model.Balance,
-                    Role = model.Role,
-                    IsActive = model.IsActive,
-                };
-                
-                UserRepository.Add(user);
-                unitOfWork.Save();
+                    var user = new User
+                    {
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        Email = model.Email,
+                        Password = model.Password,
+                        Balance = model.Balance,
+                        Role = model.Role,
+                        IsActive = model.IsActive,
+                    };
 
-                //var lastUser = UserRepository.GetAll().LastOrDefault();
+                    UserRepository.Add(user);
+                    unitOfWork.Save();
 
-                var phone = new Phone
-                {
-                    PhoneNumber = model.PhoneNumber,
-                    UserID = user.Id
-                };
 
-                var address = new Address
-                {
-                    Street = model.Street,
-                    City = model.City,
-                    PostalCode = model.PostalCode,
-                    UserID = user.Id
-                };
+                    var phone = new Phone
+                    {
+                        PhoneNumber = model.PhoneNumber,
+                        UserID = user.Id
+                    };
 
-                PhoneRepository.Add(phone);
-                AddressRepository.Add(address);
+                    var address = new Address
+                    {
+                        Street = model.Street,
+                        City = model.City,
+                        PostalCode = model.PostalCode,
+                        UserID = user.Id
+                    };
 
-                unitOfWork.Save();
+                    PhoneRepository.Add(phone);
+                    AddressRepository.Add(address);
 
-                if(model.Role == "Customer")
-                {
-                    return RedirectToAction("Customer");
+                    unitOfWork.Save();
+
+                    if (model.Role == "Customer")
+                    {
+                        return RedirectToAction("Customers");
+                    }
+                    else if (model.Role == "Seller")
+                    {
+                        return RedirectToAction("Seller");
+                    }
+                    else if (model.Role == "Shipper")
+                    {
+                        return RedirectToAction("Seller");
+                    }
                 }
-                else if(model.Role == "Seller")
+                else
                 {
-                    return RedirectToAction("Seller");
+                    var user = UserRepository.GetAll().Where(u => u.Id == model.Id)
+                        .Include(u => u.Phones)
+                        .Include(u => u.Addresses)
+                        .FirstOrDefault();
+
+                    user.FirstName = model.FirstName;
+                    user.LastName = model.LastName;
+                    user.Email = model.Email;
+                    user.Password = model.Password;
+                    user.Balance = model.Balance;
+                    user.Role = model.Role;
+                    user.IsActive = model.IsActive;
+                    user.Phones.FirstOrDefault().PhoneNumber = model.PhoneNumber;
+                    user.Addresses.FirstOrDefault().City = model.City;
+                    user.Addresses.FirstOrDefault().Street = model.Street;
+                    unitOfWork.Save();
                 }
-                else if(model.Role == "Shipper")
-                {
-                    return RedirectToAction("Seller");
-                }
+
             }
 
-            return View(model);
+            if (model.Role == "Customer")
+            {
+                return RedirectToAction("Customers");
+            }
+            else if (model.Role == "Seller")
+            {
+                return RedirectToAction("Seller");
+            }
+            else if (model.Role == "Shipper")
+            {
+                return RedirectToAction("Seller");
+            }
+            else
+            {
+                return RedirectToAction("Admin");
+
+            }
         }
 
         // GET: User/Edit/5
-        public ActionResult Edit(/*int id*/)
+        public ActionResult Edit(int id)
         {
-            //User user = UserRepository.GetById(id);
+            var user = UserRepository.GetAll().Where(u => u.Id == id)
+                .Include(u => u.Phones)
+                .Include(u => u.Addresses)
+                .FirstOrDefault();
 
-            //if (user == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            return View(/*user*/);
-        }
-
-        // POST: User/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,FirstName,LastName,Email,Password,Balance")] User user)
-        {
-            if (ModelState.IsValid)
+            if (user == null)
             {
-                UserRepository.Update(user);
-                unitOfWork.Save();
-                return RedirectToAction("Index");
+                return HttpNotFound();
             }
-            return View(user);
+
+            var UserViewModel = new UserViewModel
+            {
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+                Password = user.Password,
+                Balance = user.Balance,
+                Role = user.Role,
+                IsActive = user.IsActive,
+                PhoneNumber = user.Phones.FirstOrDefault().PhoneNumber,
+                Street = user.Addresses.FirstOrDefault().Street,
+                City = user.Addresses.FirstOrDefault().City,
+            };
+
+            return View("UserForm", UserViewModel);
         }
+
 
         public ActionResult Suspend(int id)
         {
