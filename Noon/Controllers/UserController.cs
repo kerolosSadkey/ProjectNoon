@@ -33,48 +33,30 @@ namespace Noon.Controllers
         }
 
         // GET: Customers
-        public ActionResult Customers()
+        public ActionResult Index(string Role)
         {
             // Get all users including his phone and address
             var users = UserRepository.GetAll()
                 .Include(u => u.Phones)
                 .Include(u => u.Addresses)
-                .Where(u => u.Role == "Customer");
+                .Where(u => u.Role == Role);
 
-            return View("Index", users);
-        }
+            if (users.Any())
+            {
+                return View(users);
+            }
 
-        // GET: Sellers
-        public ActionResult Sellers()
-        {
-            // Get all users including his phone and address
-            var users = UserRepository.GetAll()
-                .Include(u => u.Phones)
-                .Include(u => u.Addresses)
-                .Where(u => u.Role == "Seller");
-
-            return View("Index", users);
-        }
-
-        // GET: Shippers
-        public ActionResult Shippers()
-        {
-            // Get all users including his phone and address
-            var users = UserRepository.GetAll()
-                .Include(u => u.Phones)
-                .Include(u => u.Addresses)
-                .Where(u => u.Role == "Shipper");
-
-            return View("Index", users);
+            return HttpNotFound();
         }
 
         // GET: User/Create
         public ActionResult Create()
         {
-            return View("UserForm");
+            var UserViewModel = new UserViewModel { IsActive = true };
+            return View("UserForm", UserViewModel);
         }
 
-        // POST: Customers/Save
+        // POST: Customers/Save (Responsible on creating and Post updates
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(UserViewModel model)
@@ -117,26 +99,19 @@ namespace Noon.Controllers
                     AddressRepository.Add(address);
 
                     unitOfWork.Save();
-
-                    if (model.Role == "Customer")
-                    {
-                        return RedirectToAction("Customers");
-                    }
-                    else if (model.Role == "Seller")
-                    {
-                        return RedirectToAction("Seller");
-                    }
-                    else if (model.Role == "Shipper")
-                    {
-                        return RedirectToAction("Seller");
-                    }
+                    return RedirectToAction("Customers", model.Role);
                 }
-                else
+                else // updating
                 {
                     var user = UserRepository.GetAll().Where(u => u.Id == model.Id)
                         .Include(u => u.Phones)
                         .Include(u => u.Addresses)
                         .FirstOrDefault();
+
+                    if (user == null)
+                    {
+                        return HttpNotFound();
+                    }
 
                     user.FirstName = model.FirstName;
                     user.LastName = model.LastName;
@@ -153,23 +128,7 @@ namespace Noon.Controllers
 
             }
 
-            if (model.Role == "Customer")
-            {
-                return RedirectToAction("Customers");
-            }
-            else if (model.Role == "Seller")
-            {
-                return RedirectToAction("Seller");
-            }
-            else if (model.Role == "Shipper")
-            {
-                return RedirectToAction("Seller");
-            }
-            else
-            {
-                return RedirectToAction("Admin");
-
-            }
+            return RedirectToAction("Customers", model.Role);
         }
 
         // GET: User/Edit/5
@@ -203,7 +162,6 @@ namespace Noon.Controllers
             return View("UserForm", UserViewModel);
         }
 
-
         public ActionResult Suspend(int id)
         {
             // get the user
@@ -219,7 +177,10 @@ namespace Noon.Controllers
             unitOfWork.Save();
 
             // get all users
-            var users = UserRepository.GetAll();
+            var users = UserRepository.GetAll()
+                .Include(u => u.Phones)
+                .Include(u => u.Addresses)
+                .Where(u => u.Role == user.Role);
 
             return PartialView("_UserPartial", users);
         }
@@ -239,7 +200,10 @@ namespace Noon.Controllers
             unitOfWork.Save();
 
             // get all users
-            var users = UserRepository.GetAll();
+            var users = UserRepository.GetAll()
+                .Include(u => u.Phones)
+                .Include(u => u.Addresses)
+                .Where(u => u.Role == user.Role);
 
             return PartialView("_UserPartial", users);
         }

@@ -2,98 +2,131 @@
 @model IQueryable<User>
 @helper customersList(IQueryable<User> Users)
 {
-    foreach (var user in Model)
-    {
+    <div class="nk-tb-item nk-tb-head">
         <div class="nk-tb-col nk-tb-col-check">
             <div class="custom-control custom-control-sm custom-checkbox notext">
-                <input type="checkbox" class="custom-control-input" id="uid1">
-                <label class="custom-control-label" for="uid1"></label>
+                <input type="checkbox" class="custom-control-input" id="uid">
+                <label class="custom-control-label" for="uid"></label>
             </div>
         </div>
-        <div class="nk-tb-col">
-            <a href="html/user-details-regular.html">
-                <div class="user-card">
-                    <div class="user-avatar bg-primary">
-                        <span>AB</span>
-                    </div>
-                    <div class="user-info">
-                        <span class="tb-lead">@user.FirstName @user.LastName <span class="dot dot-success d-md-none ms-1"></span></span>
-                        <span>@user.Email</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="nk-tb-col tb-col-mb">
-            <span class="tb-amount">@user.Balance <span class="currency">EGP</span></span>
-        </div>
-        <div class="nk-tb-col tb-col-md">
-            <span>@user.Phones.Where(p => p.UserID == user.Id).FirstOrDefault().PhoneNumber</span>
-        </div>
-        <div class="nk-tb-col tb-col-lg">
-            <span>@user.Addresses.Where(a => a.UserID == user.Id).FirstOrDefault().City</span>
-        </div>
-        <div class="nk-tb-col tb-col-lg">
-            <span>@user.CreatedAt.ToShortDateString()</span>
-        </div><div class="nk-tb-col tb-col-md">
-            @if (user.IsActive)
-            {
-                <span class="tb-status text-success">@user.IsActive</span>
-            }
-            else
-            {
-                <span class="tb-status text-danger">@user.IsActive</span>
-            }
-
-        </div>
+        <div class="nk-tb-col"><span class="sub-text">User</span></div>
+        <div class="nk-tb-col tb-col-mb"><span class="sub-text">Balance</span></div>
+        <div class="nk-tb-col tb-col-md"><span class="sub-text">Phone</span></div>
+        <div class="nk-tb-col tb-col-lg"><span class="sub-text">City</span></div>
+        <div class="nk-tb-col tb-col-lg"><span class="sub-text">Created At</span></div>
+        <div class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></div>
         <div class="nk-tb-col nk-tb-col-tools">
-            <ul class="nk-tb-actions gx-1">
-                <li class="nk-tb-action-hidden">
-                    <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email">
-                        <em class="icon ni ni-mail-fill"></em>
-                    </a>
-                </li>
-                <li class="nk-tb-action-hidden">
-                    <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Suspend">
-                        <em class="icon ni ni-user-cross-fill"></em>
-                    </a>
-                </li>
+            <ul class="nk-tb-actions gx-1 my-n1">
                 <li>
                     <div class="drodown">
-                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                         <div class="dropdown-menu dropdown-menu-end">
                             <ul class="link-list-opt no-bdr">
-                                <li><a href="html/user-details-regular.html"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
-                                <li><a href="#"><em class="icon ni ni-repeat"></em><span>Orders</span></a></li>
-                                <li class="divider"></li>
-                                <li>
-                                    @Ajax.ActionLink("Suspend", "Suspend",
-                                    new { @id = user.Id },
-                                    new AjaxOptions
-                                    {
-                                        InsertionMode = InsertionMode.Replace,
-                                        UpdateTargetId = "ajax"
-                                    },
-                                        null)
-                                </li>
-                                <li>
-                                    @Ajax.ActionLink("Activate", "Activate",
-                                    new { @id = user.Id },
-                                    new AjaxOptions
-                                    {
-                                        InsertionMode = InsertionMode.Replace,
-                                        UpdateTargetId = "ajax"
-                                    },
-                                        null)
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Edit", "Edit", new { id = user.Id})
-                                </li>
-                                @*<li><a href="#"><em class="icon ni ni-na"></em><span>Suspend</span></a></li>*@
+                                <li><a href="#"><em class="icon ni ni-mail"></em><span>Send Email to All</span></a></li>
+                                <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend Selected</span></a></li>
+                                <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Seleted</span></a></li>
+                                <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Password</span></a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
             </ul>
+        </div>
+    </div><!-- .nk-tb-item -->
+    foreach (var user in Model)
+    {
+        <div class="nk-tb-item">
+            <div class="nk-tb-col nk-tb-col-check">
+                <div class="custom-control custom-control-sm custom-checkbox notext">
+                    <input type="checkbox" class="custom-control-input" id="uid1">
+                    <label class="custom-control-label" for="uid1"></label>
+                </div>
+            </div>
+            <div class="nk-tb-col">
+                <a href="html/user-details-regular.html">
+                    <div class="user-card">
+                        <div class="user-avatar bg-primary">
+                            <span>AB</span>
+                        </div>
+                        <div class="user-info">
+                            <span class="tb-lead">@user.FirstName @user.LastName <span class="dot dot-success d-md-none ms-1"></span></span>
+                            <span>@user.Email</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="nk-tb-col tb-col-mb">
+                <span class="tb-amount">@user.Balance <span class="currency">EGP</span></span>
+            </div>
+            <div class="nk-tb-col tb-col-md">
+                <span>@user.Phones.Where(p => p.UserID == user.Id).FirstOrDefault().PhoneNumber</span>
+            </div>
+            <div class="nk-tb-col tb-col-lg">
+                <span>@user.Addresses.Where(a => a.UserID == user.Id).FirstOrDefault().City</span>
+            </div>
+            <div class="nk-tb-col tb-col-lg">
+                <span>@user.CreatedAt.ToShortDateString()</span>
+            </div><div class="nk-tb-col tb-col-md">
+                @if (user.IsActive)
+                {
+                    <span class="tb-status text-success">@user.IsActive</span>
+                }
+                else
+                {
+                    <span class="tb-status text-danger">@user.IsActive</span>
+                }
+
+            </div>
+            <div class="nk-tb-col nk-tb-col-tools">
+                <ul class="nk-tb-actions gx-1">
+                    <li class="nk-tb-action-hidden">
+                        <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email">
+                            <em class="icon ni ni-mail-fill"></em>
+                        </a>
+                    </li>
+                    <li class="nk-tb-action-hidden">
+                        <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Suspend">
+                            <em class="icon ni ni-user-cross-fill"></em>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="drodown">
+                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <ul class="link-list-opt no-bdr">
+                                    <li><a href="html/user-details-regular.html"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
+                                    <li><a href="#"><em class="icon ni ni-repeat"></em><span>Orders</span></a></li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        @Ajax.ActionLink("Suspend", "Suspend",
+                                        new { @id = user.Id },
+                                        new AjaxOptions
+                                        {
+                                            InsertionMode = InsertionMode.Replace,
+                                            UpdateTargetId = "ajax"
+                                        },
+                                            null)
+                                    </li>
+                                    <li>
+                                        @Ajax.ActionLink("Activate", "Activate",
+                                        new { @id = user.Id },
+                                        new AjaxOptions
+                                        {
+                                            InsertionMode = InsertionMode.Replace,
+                                            UpdateTargetId = "ajax"
+                                        },
+                                            null)
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Edit", "Edit", new { id = user.Id })
+                                    </li>
+                                    @*<li><a href="#"><em class="icon ni ni-na"></em><span>Suspend</span></a></li>*@
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     }
 

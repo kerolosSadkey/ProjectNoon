@@ -33,4 +33,3 @@ C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Mod
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.dll
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.pdb
-C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.csproj.AssemblyReference.cache

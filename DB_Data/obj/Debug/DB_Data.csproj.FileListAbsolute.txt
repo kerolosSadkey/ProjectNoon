@@ -45,9 +45,9 @@ C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\bin\Debug\En
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.csproj.AssemblyReference.cache
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.Migrations.Init.resources
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.Migrations.InitV2.resources
+C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.Migrations.InitV3.resources
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.csproj.GenerateResource.cache
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.csproj.CoreCompileInputs.cache
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.csproj.CopyComplete
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.dll
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.pdb
-C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\DB_Data\obj\Debug\DB_Data.Migrations.InitV3.resources

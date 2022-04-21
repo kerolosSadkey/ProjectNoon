@@ -179,44 +179,11 @@
                     </div><!-- .card-search -->
                 </div><!-- .card-inner -->
                 <div class="card-inner p-0">
-                    <div class="nk-tb-list nk-tb-ulist">
-                        <div class="nk-tb-item nk-tb-head">
-                            <div class="nk-tb-col nk-tb-col-check">
-                                <div class="custom-control custom-control-sm custom-checkbox notext">
-                                    <input type="checkbox" class="custom-control-input" id="uid">
-                                    <label class="custom-control-label" for="uid"></label>
-                                </div>
-                            </div>
-                            <div class="nk-tb-col"><span class="sub-text">User</span></div>
-                            <div class="nk-tb-col tb-col-mb"><span class="sub-text">Balance</span></div>
-                            <div class="nk-tb-col tb-col-md"><span class="sub-text">Phone</span></div>
-                            <div class="nk-tb-col tb-col-lg"><span class="sub-text">City</span></div>
-                            <div class="nk-tb-col tb-col-lg"><span class="sub-text">Created At</span></div>
-                            <div class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></div>
-                            <div class="nk-tb-col nk-tb-col-tools">
-                                <ul class="nk-tb-actions gx-1 my-n1">
-                                    <li>
-                                        <div class="drodown">
-                                            <a href="#" class="dropdown-toggle btn btn-icon btn-trigger me-n1" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <ul class="link-list-opt no-bdr">
-                                                    <li><a href="#"><em class="icon ni ni-mail"></em><span>Send Email to All</span></a></li>
-                                                    <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend Selected</span></a></li>
-                                                    <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Seleted</span></a></li>
-                                                    <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Password</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div><!-- .nk-tb-item -->
-                        @* Render Partial To Use Ajax *@
-                        <div class="nk-tb-item" id="ajax">
-                            @Html.Partial("_UserPartial")
-                        </div>
-                        <!-- .nk-tb-item -->
+                    <div class="nk-tb-list nk-tb-ulist" id="ajax">
 
+                        @* Render Partial To Use Ajax *@
+
+                        @Html.Partial("_UserPartial")
 
                     </div><!-- .nk-tb-list -->
                 </div><!-- .card-inner -->

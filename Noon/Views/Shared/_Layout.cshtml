@@ -107,7 +107,7 @@
                                 </a>
                                 <ul class="nk-menu-sub">
                                     <li class="nk-menu-item">
-                                        <a href="html/hospital/patient-add.html" class="nk-menu-link"><span class="nk-menu-text">Add User</span></a>
+                                        <a href="@Url.Action("Create","User")" class="nk-menu-link"><span class="nk-menu-text">Add User</span></a>
                                     </li>
                                 </ul><!-- .nk-menu-sub -->
                             </li><!-- .nk-menu-item -->
@@ -199,13 +199,16 @@
                                 </a>
                                 <ul class="nk-menu-sub">
                                     <li class="nk-menu-item">
-                                        <a href="html/user-list-regular.html" class="nk-menu-link"><span class="nk-menu-text">Customer List</span></a>
+                                        <a href="@Url.Action("Index", "User", new {Role = "customer"})" class="nk-menu-link"><span class="nk-menu-text">Customers List</span></a>
                                     </li>
                                     <li class="nk-menu-item">
-                                        <a href="html/user-list-compact.html" class="nk-menu-link"><span class="nk-menu-text">Seller List</span></a>
+                                        <a href="@Url.Action("Index", "User", new {Role = "seller"})" class="nk-menu-link"><span class="nk-menu-text">Sellers List</span></a>
                                     </li>
                                     <li class="nk-menu-item">
-                                        <a href="html/user-details-regular.html" class="nk-menu-link"><span class="nk-menu-text">Shipper List</span></a>
+                                        <a href="@Url.Action("Index", "User", new {Role = "shipper"})" class="nk-menu-link"><span class="nk-menu-text">Shippers List</span></a>
+                                    </li>
+                                    <li class="nk-menu-item">
+                                        <a href="@Url.Action("Index", "User", new {Role = "admin"})" class="nk-menu-link"><span class="nk-menu-text">Admins List</span></a>
                                     </li>
                                 </ul><!-- .nk-menu-sub -->
                             </li><!-- .nk-menu-item -->
