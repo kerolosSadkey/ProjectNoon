@@ -8,11 +8,13 @@ using System.Web;
 using System.Web.Mvc;
 using Data;
 using Model;
+using Noon.Filters;
 using Noon.ViewModels;
 using Repository;
 
 namespace Noon.Controllers
 {
+    [Authentication]
     public class UserController : Controller
     {
         // Unit Of Work which is responsible on operations on Context
