@@ -33,3 +33,15 @@ C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Mod
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.dll
 C:\Users\enaei\Desktop\ITI\aspDotNet\GithubNoon\ProjectNoon\Models\obj\Debug\Models.pdb
+C:\Users\enaei\source\repos\NoonV2\Models\bin\Debug\Models.dll.config
+C:\Users\enaei\source\repos\NoonV2\Models\bin\Debug\Models.dll
+C:\Users\enaei\source\repos\NoonV2\Models\bin\Debug\Models.pdb
+C:\Users\enaei\source\repos\NoonV2\Models\bin\Debug\EntityFramework.dll
+C:\Users\enaei\source\repos\NoonV2\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\enaei\source\repos\NoonV2\Models\bin\Debug\EntityFramework.xml
+C:\Users\enaei\source\repos\NoonV2\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\enaei\source\repos\NoonV2\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+C:\Users\enaei\source\repos\NoonV2\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\enaei\source\repos\NoonV2\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\enaei\source\repos\NoonV2\Models\obj\Debug\Models.dll
+C:\Users\enaei\source\repos\NoonV2\Models\obj\Debug\Models.pdb
